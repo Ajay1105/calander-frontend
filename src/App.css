@@ -2,37 +2,27 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.rbc-day-bg:hover {
+  background-color: #C4DFDF !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.rbc-date-cell {
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.rbc-header{
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  height: fit-content !important;
 }
 
-.App-link {
-  color: #61dafb;
+.rbc-toolbar-label {
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: rgb(37, 66, 197)
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rbc-allday-cell{
+  padding-top: 1.2rem;
 }
