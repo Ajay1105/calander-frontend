@@ -32,6 +32,7 @@ const EventForm = () => {
       twitter: "",
     },
   });
+  const [success, setSuccess] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -86,6 +87,7 @@ const EventForm = () => {
         eventObj: formData,
       });
       console.log('API Response:', response.data);
+      setSuccess(true);
     } catch (error) {
       console.error('API Error:', error.message);
     }
@@ -93,8 +95,9 @@ const EventForm = () => {
 
   return (
     <div>
-    <p className="text-5xl font-semibold text-blue-700 text-center italic">Add Event</p>
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto my-8">
+    {success && <p className=" text-4xl bg-green-600 text-white py-5 text-center">Event successfully Added</p>}
+    <p className="text-5xl font-semibold text-blue-700 text-center italic mt-8">Add Event</p>
+      <form onSubmit={handleSubmit} className="max-w-[80vw] md:max-w-md mx-auto my-8">
         <label className="block mb-4">
           Event Name:
           <input
@@ -315,6 +318,7 @@ const EventForm = () => {
           Submit
         </button>
       </form>
+      {success && <p className=" text-4xl bg-green-600 text-white py-5 text-center">Event successfully Added</p>}
     </div>
   );
 };
