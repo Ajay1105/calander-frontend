@@ -26,3 +26,11 @@
 .rbc-allday-cell{
   padding-top: 1.2rem;
 }
+
+.css-42b2qy{
+  width: fit-content !important;
+}
+
+.chakra-select__icon{
+  visibility: hidden;
+}

@@ -5,7 +5,7 @@ const EventCard = (props) => {
 
 const handleClick = async()=>{
     try {
-        const response = await axios.delete(`http://localhost:8000/api/events/${props.event._id}`);
+        const response = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/events/${props.event._id}`);
         alert("Successfully Deleted", response);
         window.location.reload();
       } catch (error) {

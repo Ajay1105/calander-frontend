@@ -82,15 +82,11 @@ const EventForm = () => {
     e.preventDefault();
     console.log(formData);
     try {
-      // Make a POST request to localhost:3000/api/event
-      const response = await axios.post('http://localhost:8000/api/events', {
+      const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/events`, {
         eventObj: formData,
       });
-
-      // Handle the response as needed
       console.log('API Response:', response.data);
     } catch (error) {
-      // Handle errors
       console.error('API Error:', error.message);
     }
   };
